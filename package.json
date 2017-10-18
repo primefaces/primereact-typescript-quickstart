@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.5",
+    "font-awesome": "^4.7.0",
+    "primereact": "1.1.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts-ts": "2.7.0",
-    "primereact": "^1.0.1",
-    "classnames": "^2.2.5"
+    "react-scripts-ts": "2.7.0"
   },
   "scripts": {
     "start": "react-scripts-ts start",
