@@ -17,6 +17,6 @@
   font-size: large;
 }
 
-import 'primereact/resources/primereact.min.css';
-import 'primereact/resources/themes/omega/theme.css';
-import 'font-awesome/css/font-awesome.css';
+@import '../node_modules/primereact/resources/primereact.min.css';
+@import '../node_modules/primereact/resources/themes/omega/theme.css';
+@import '../node_modules/font-awesome/css/font-awesome.css';
