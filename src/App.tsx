@@ -1,7 +1,9 @@
-
 import * as React from 'react';
 import './App.css';
 import { Button } from 'primereact/components/button/Button';
+import 'primereact/resources/primereact.min.css';
+import 'primereact/resources/themes/omega/theme.css';
+import 'font-awesome/css/font-awesome.css';
 
 const logo = require('./primereact-logo.png');
 
