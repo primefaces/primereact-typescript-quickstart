@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "classnames": "^2.2.5",
-    "font-awesome": "^4.7.0",
-    "primereact": "1.5.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "classnames": "^2.2.6",
+    "primeicons": "1.0.0-beta.9",
+    "primereact": "2.0.0-alpha.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-scripts-ts": "2.14.0"
   },
   "scripts": {
@@ -17,10 +17,10 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
-    "@types/jest": "^22.2.0",
-    "@types/node": "^9.4.7",
-    "@types/react": "^16.0.40",
-    "@types/react-dom": "^16.0.4",
-    "typescript": "^2.7.2"
+    "@types/jest": "^22.2.3",
+    "@types/node": "^9.6.23",
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
+    "typescript": "^2.9.2"
   }
 }

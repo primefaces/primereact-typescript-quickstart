@@ -1,9 +1,9 @@
 import * as React from 'react';
 import './App.css';
-import { Button } from 'primereact/components/button/Button';
+import { Button } from 'primereact/button';
 import 'primereact/resources/primereact.min.css';
 import 'primereact/resources/themes/omega/theme.css';
-import 'font-awesome/css/font-awesome.css';
+import 'primeicons/primeicons.css';
 
 const logo = require('./primereact-logo.png');
 
@@ -35,7 +35,7 @@ class App extends React.Component<AppProps, AppState> {
                     <img src={logo} className="App-logo" alt="logo" />
                 </div>
                 <br/>
-                <Button label="PrimeReact" onClick={this.increment} />
+                <Button label="PrimeReact" icon="pi pi-check" onClick={this.increment} />
                 <p>Number of Clicks:{this.state.count}</p>
             </div>
         );
