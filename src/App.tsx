@@ -1,20 +1,21 @@
-import * as React from 'react';
+import React from 'react';
+import logo from './primereact-logo.png';
 import './App.css';
+
 import { Button } from 'primereact/button';
+
 import 'primereact/resources/primereact.min.css';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primeicons/primeicons.css';
 
-const logo = require('./primereact-logo.png');
-
-interface AppProps {}
-interface AppState {
+interface Props {}
+interface State {
     count: number;
 }
 
-class App extends React.Component<AppProps, AppState> {
+class App extends React.Component<Props, State> {
     
-    constructor(props: AppProps) {
+    constructor(props: Props) {
         super(props);
         this.state = {
             count: 0
