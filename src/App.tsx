@@ -1,46 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './primereact-logo.png';
 import './App.css';
 
 import { Button } from 'primereact/button';
 
 import 'primereact/resources/primereact.min.css';
-import 'primereact/resources/themes/nova-light/theme.css';
+import 'primereact/resources/themes/nova/theme.css';
 import 'primeicons/primeicons.css';
 
-interface Props {}
-interface State {
-    count: number;
-}
+function App() {
 
-class App extends React.Component<Props, State> {
-    
-    constructor(props: Props) {
-        super(props);
-        this.state = {
-            count: 0
-        };
-        this.increment = this.increment.bind(this);
+    const [count, setCount] = useState(0);
+
+    const increment = () => {
+        setCount(prevState => prevState + 1)
     }
-    
-    increment() {
-        this.setState({
-            count: this.state.count + 1
-        });
-    }
-    
-    render() {
-        return (
-            <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                </div>
-                <br/>
-                <Button label="PrimeReact" icon="pi pi-check" onClick={this.increment} />
-                <p>Number of Clicks:{this.state.count}</p>
+
+    return (
+        <div className="App">
+            <div className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
             </div>
-        );
-    }
+            <br />
+            <Button label="PrimeReact" icon="pi pi-check" onClick={increment} />
+            <p>Number of Clicks: {count}</p>
+        </div>
+    );
+
 }
 
 export default App;
