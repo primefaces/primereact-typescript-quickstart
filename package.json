@@ -18,7 +18,7 @@
     "classnames": "^2.2.6",
     "primeflex": "2.0.0",
     "primeicons": "4.1.0",
-    "primereact": "6.0.2"
+    "primereact": "6.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
