@@ -13,6 +13,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",
+    "react-transition-group": "^4.4.1",
     "typescript": "~3.7.2",
     "classnames": "^2.2.6",
     "primeflex": "2.0.0",

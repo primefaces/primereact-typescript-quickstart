@@ -1,32 +1,51 @@
-import React, { useState } from 'react';
-import logo from './primereact-logo.png';
+import React, { useState, useRef } from 'react';
+
+import { InputText } from 'primereact/inputtext';
+import { Button } from 'primereact/button';
+import { Toast } from 'primereact/toast';
+import PrimeReact from 'primereact/api';
+
+import 'primereact/resources/themes/saga-blue/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
+
+import logo from './logo.svg';
 import './App.css';
 
-import { Button } from 'primereact/button';
-
-import 'primereact/resources/primereact.min.css';
-import 'primereact/resources/themes/nova/theme.css';
-import 'primeicons/primeicons.css';
-
 function App() {
+  const [text, setText] = useState('');
+  const toastRef = useRef<any>();
 
-    const [count, setCount] = useState(0);
+  // active ripple effect
+  PrimeReact.ripple = true;
 
-    const increment = () => {
-        setCount(prevState => prevState + 1)
+  const onFormSubmit = (e : any) => {
+    if (text) {
+      toastRef.current.show({ severity: 'info', summary: text, life: 3000 });
     }
 
-    return (
-        <div className="App">
-            <div className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-            </div>
-            <br />
-            <Button label="PrimeReact" icon="pi pi-check" onClick={increment} />
-            <p>Number of Clicks: {count}</p>
-        </div>
-    );
+    // clear
+    setText('');
 
+    e.preventDefault();
+  }
+
+  return (
+    <div className="App">
+
+      <Toast ref={toastRef} />
+
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+      </header>
+
+      <form className="p-d-flex p-jc-center p-mt-6" onSubmit={onFormSubmit}>
+        <InputText value={text} onChange={(e : any ) => setText(e.target.value)} />
+        <Button type="submit" label="Submit" icon="pi pi-check" className="p-ml-2"/>
+      </form>
+    </div>
+  );
 }
 
 export default App;
